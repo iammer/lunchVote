@@ -1,6 +1,6 @@
 {
-	"name": "simpleServer",
-	"description": "Simple test server",
+	"name": "lunchVote",
+	"description": "Lunch Vote",
 	"version": "0.0.1",
 	"private": true,
 	"dependencies": {
@@ -10,6 +10,7 @@
 		"connect-coffee-script": "0.1.6",
 		"connect-less": "0.3.x",
 		"morgan": "~1",
+		"async": "~0.9",
 		"jade": "1.3.x",
 		"nedb": "~0.10",
 		"grunt": "~0.4",

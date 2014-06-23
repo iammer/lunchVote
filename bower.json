@@ -1,9 +1,10 @@
 {
-	"name": "simpleServer",
-	"description": "Simple test server",
+	"name": "lunchVote",
+	"description": "Lunch Vote",
 	"version": "0.0.1",
 	"dependencies": {
 		"jquery": "latest",
+		"jquery-ui": "latest",
 		"foundation": "latest",
 		"jquery.behavior": "fschaefer/jquery-behavior"
 	},
@@ -17,6 +18,10 @@
 		},
 		"jquery": {
 			"js": "dist/jquery.js"
+		},
+		"jquery.ui": {
+			"js": "jquery-ui.min.js",
+			"css": "jquery-ui.min.css"
 		},
 		"jquery.*": {
 			"js": "**/*.js"

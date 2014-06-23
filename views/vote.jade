@@ -1,0 +1,18 @@
+extends layouts/main
+
+block head
+	script(src='/coffee/vote.js',type='text/javascript')
+
+block body
+	.ballot
+		each item in ballot
+			.ballotItem.row(data-id=item._id)
+				.small-1.small-offset-1.column.text-right
+					a.foundicon-up-arrow.moveTop
+				.small-1.column.text-right
+					a.foundicon-plus.moveUp
+				.small-6.column.text-center= item.name
+				.small-1.column.text-left
+					a.foundicon-minus.moveDown
+				.small-1.column.text-left.end
+					a.foundicon-down-arrow.moveBottom

@@ -5,18 +5,15 @@ coffeescript= require 'connect-coffee-script'
 connectless= require 'connect-less'
 morgan= require 'morgan'
 express= require 'express'
-Datasource= require 'nedb'
 
+database= require './src/database'
 routeLoader= require './src/routeLoader'
 
-db= new Datasource
-	filename: 'simple.nedb'
-
-db.loadDatabase (err) ->
-	if err
-		console.log "Error loading database: #{err}"
+db=new database.DB (err) ->
+	if (err)
+		console.log "Error loading DB #{err}"
 	else
-		console.log "Database loaded"
+		console.log "DB Loaded"
 
 app= express()
 
@@ -43,6 +40,9 @@ app.use routeLoader __dirname + '/src/routes',
 app.use express.static __dirname + '/public'
 app.use express.static __dirname + '/generated/public'
 app.use express.static __dirname + '/bower'
+
+app.get '/', (req, res) ->
+	res.redirect '/vote'
 
 app.listen 8080
 

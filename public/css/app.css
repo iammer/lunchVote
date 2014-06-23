@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200);
+
+h1, .ballotItem  {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.ballotItem {
+	border-radius: 1000px;
+	background: #6699cc;
+	border: 1px solid #777777;
+	margin-bottom: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.ballotItem a {
+	color: #222;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.root {
+	margin-top: 5;
+}
